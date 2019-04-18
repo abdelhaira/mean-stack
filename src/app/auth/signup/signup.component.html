@@ -17,6 +17,6 @@
       <mat-error *ngIf="confirmPasswordInput.invalid">Please Confirm your password.</mat-error>
       <mat-error *ngIf="signupForm.getControl('passwordInput')!=signupForm.getControl('confirmPassword')">Password mismatch.</mat-error>
     </mat-form-field>
-    <button mat-raised-button color="accent" type="submit">signup</button>
+    <button mat-raised-button color="accent" type="submit" *ngIf="!isLoading">signup</button>
   </form>
 </mat-card>

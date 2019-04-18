@@ -22,6 +22,7 @@ export class SignupComponent implements OnInit {
     if(form.value.confirmPassword != form.value.password){
       this.passMatch=false;
     }
+    this.isLoading=true;
     this.authService.createUser(form.value.email,form.value.password);
   }
 
